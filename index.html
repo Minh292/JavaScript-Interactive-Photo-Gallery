@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #88add6;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #image {
+      height: 400px;
+      margin-bottom: 40px;
+      background-color: rgb(79, 124, 182);  /*#5e91cc*/
+      color: white;
+      line-height: 400px; /* căn giữa theo chiều dọc */
+      font-size: 24px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 12px;
+      transition: background-image 0.3s ease;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .preview {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 3px solid transparent;
+      border-radius: 12px;
+      transition: transform 0.2s, border 0.2s;
+    }
+
+    .preview:hover {
+      transform: scale(1.08);
+      border-color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="image">Hover over an image below to display here.</div>
+
+<img class="preview" src="images/Cam.jpg" alt="Cam nắng chiều" onmouseover="upDate(this)" onmouseout="undo()">
+<img class="preview" src="images/Tim.jpg" alt="Tím mộng mơ" onmouseover="upDate(this)" onmouseout="undo()">
+<img class="preview" src="images/Xanh.jpg" alt="Xanh thanh bình" onmouseover="upDate(this)" onmouseout="undo()">
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
